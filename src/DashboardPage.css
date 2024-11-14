@@ -1,0 +1,57 @@
+/* DashboardPage.css */
+
+/* Estilos generales para la página */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 250px; /* Deja espacio para el sidebar */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .dashboard-container h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los gráficos */
+  .chart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Se adapta a diferentes pantallas */
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .chart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chart h3 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsividad */
+  @media screen and (max-width: 768px) {
+    .dashboard-container {
+      margin-left: 200px; /* Reduce el margen en pantallas más pequeñas */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .dashboard-container {
+      margin-left: 100px; /* En pantallas más pequeñas, reducimos aún más el margen */
+    }
+  
+    .chart-container {
+      grid-template-columns: 1fr; /* Los gráficos se apilan verticalmente */
+    }
+  }
+  
